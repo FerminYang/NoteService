@@ -1,4 +1,5 @@
-﻿using Apworks.Application;
+﻿using System.Data.Entity;
+using Apworks.Application;
 using Apworks.Config.Fluent;
 using Apworks.Repositories;
 using Apworks.Repositories.EntityFramework;
@@ -20,6 +21,7 @@ namespace NoteServiceNancy
         protected override void ApplicationStartup(IUnityContainer container, Nancy.Bootstrapper.IPipelines pipelines)
         {
             base.ApplicationStartup(container, pipelines);
+            Database.SetInitializer(new NoteServiceInitializer());
             AppRuntime.Instance
                 .ConfigureApworks()
                 .UsingUnityContainerWithDefaultSettings()

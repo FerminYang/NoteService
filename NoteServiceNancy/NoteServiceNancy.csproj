@@ -97,6 +97,7 @@
     <Compile Include="NoteBootstrapper.cs" />
     <Compile Include="NoteModule.cs" />
     <Compile Include="NoteServiceDbContext.cs" />
+    <Compile Include="NoteServiceInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
